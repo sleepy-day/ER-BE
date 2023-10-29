@@ -6,13 +6,13 @@ type ERApiManager struct {
 
 // Response structs
 
-type FreeCharacters struct {
+type FreeCharactersResponse struct {
 	Code         int    `json:"code"`
 	Message      string `json:"message"`
 	CharacterIds []int  `json:"data"`
 }
 
-type LanguageUrl struct {
+type LanguageResponse struct {
 	Code    int    `json:"code"`
 	Message string `json:"message"`
 	Data    struct {
@@ -333,13 +333,13 @@ type ItemBuildResponse struct {
 	ItemBuild ItemBuild `json:"result"`
 }
 
-// Game data structs
-
 type CharacterExpResponse struct {
 	Code         int            `json:"code"`
 	Message      string         `json:"message"`
 	CharacterExp []CharacterExp `json:"data"`
 }
+
+// Game data structs
 
 type Area struct {
 	Code                     int    `json:"code"`

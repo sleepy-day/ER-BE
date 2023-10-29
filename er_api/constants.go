@@ -31,6 +31,26 @@ const RUSSIAN = "Russian"
 const THAI = "Thai"
 const VIETNAMESE = "Vietnamese"
 
+func getLanguages() [15]string {
+	return [15]string{
+		ENGLISH,
+		KOREAN,
+		JAPANESE,
+		CHINESE_SIMPLIFIED,
+		CHINESE_TRADITIONAL,
+		FRENCH,
+		SPANISH,
+		SPANISH_LATIN,
+		PORTUGUESE,
+		PORTUGUESE_LATIN,
+		INDONESIAN,
+		GERMAN,
+		RUSSIAN,
+		THAI,
+		VIETNAMESE,
+	}
+}
+
 // Data V2 Meta Types
 const DATA_ACTION_COST string = "ActionCost"
 const DATA_AREA string = "Area"

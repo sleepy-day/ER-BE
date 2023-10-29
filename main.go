@@ -1,17 +1,20 @@
 package main
 
 import (
-	"fmt"
 	"os"
 
+	"github.com/sleepy-day/ER-BE/er_api"
 	"gopkg.in/yaml.v3"
 )
 
 var AppConfig Config
+var ApiManager er_api.ERApiManager
 
 func main() {
 	setConfig()
-	fmt.Println(AppConfig)
+	ApiManager = er_api.BuildERApiManager(AppConfig.ApiKey.Secret)
+
+	ApiManager.GetI10nFiles()
 }
 
 func setConfig() {
